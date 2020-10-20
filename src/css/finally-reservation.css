@@ -20,19 +20,26 @@
 
 .__box-plain {
     margin-bottom: 40px;
+
 }
 .__box-plain ul{
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
 }
 
 .__box-plain li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #c7c7c7;
     border-radius: 15px;
     padding: 15px;
-    width: calc((100%/4) -10px);
+    /* width: calc((100%/4) -10px); */
+    width: 18vw;
     text-align: center;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 .__box-plain li.active {
@@ -43,6 +50,12 @@
 .__box-plain p {
     font-size: 16px;
     margin-bottom: 20px;
+}
+
+.__box-plain h6 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .__box-plain p:nth-child(2) {
@@ -114,6 +127,22 @@
 
 .__services .__box-one .list li {
     width: calc(100%/2);
+    margin-bottom: 10px;
+}
+
+.__services .__box-one .list input {
+    all: unset;
+    border: 1px solid black;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.__services .__box-one .list input:checked {
+    background-color: #ff7a0b;
+    
 }
 
 .next {

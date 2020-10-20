@@ -63,7 +63,7 @@ a{text-decoration: none;}
 }
 
 .__header-top ul {
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .__header-top li {
@@ -143,6 +143,7 @@ a{text-decoration: none;}
 
 .__description-page {
     margin-top: 50px;
+    margin-bottom: 25px;
 }
 
 .__description-page h2 {
