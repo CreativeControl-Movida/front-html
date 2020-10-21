@@ -538,3 +538,161 @@ footer .copyright small:nth-child(2):before {
 }
 
 /* end footer */
+
+/* login */
+
+.__modal-login{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: none;
+}
+
+.__modal-login.active{
+    display: block;
+}
+
+.__modal-login-overlay{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+    cursor: pointer;
+}
+
+.__modal-login-box{
+    margin: 5vh auto;
+    width: 395px;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.__modal-login-box .message-discount{
+    background: #F2EEEE; 
+    padding: 15px 30px;
+    margin-bottom: 20px;
+}
+
+.__modal-login-box h3{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.__modal-login-box form input{
+    border: 2px solid #C6C3C3;
+    height: 40px;
+    width: 100%;
+    padding-left: 45px;
+    color: #000;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.__modal-login-box form p{
+    position: relative;
+}
+
+.__modal-login-box form p:nth-child(1)::before{
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33.605' height='33.605'%3E%3Cpath data-name='Caminho 100' d='M13.603 16.802a2.721 2.721 0 002.8-2.8 2.721 2.721 0 00-2.8-2.8 2.721 2.721 0 00-2.8 2.8 2.72 2.72 0 002.8 2.8z' fill='%23626262'/%3E%3Cpath data-name='Caminho 101' d='M28 5.601H5.6a2.72 2.72 0 00-2.8 2.625v17.153a2.72 2.72 0 002.8 2.622H28a2.72 2.72 0 002.8-2.622V8.226A2.72 2.72 0 0028 5.601zm0 19.6l-22.4-.013V8.401l22.4.015z' fill='%23626262'/%3E%3Cpath data-name='Caminho 102' d='M19.601 12.602h5.6v2.8h-5.6zm1.4 5.6h4.2v2.8h-4.2zm-2.2 3.551c0-1.924-2.347-3.9-5.2-3.9s-5.2 1.977-5.2 3.901v.65h10.4z' fill='%23626262'/%3E%3Cpath data-name='Retângulo 85' fill='rgba(0,0,0,0)' d='M0 0h33.605v33.605H0z'/%3E%3C/svg%3E");
+    background-size: 35px 35px;
+}
+
+.__modal-login-box form p:nth-child(2)::before{
+    position: absolute;
+    left: 6px;
+    top: 2.5px;
+    content: '';
+    display: block;
+    width: 33px;
+    height: 33px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34.005' height='34.005'%3E%3Cpath data-name='Caminho 94' d='M17.002 2.834a7.092 7.092 0 00-7.084 7.084v2.834H8.501a2.837 2.837 0 00-2.834 2.834v12.748a2.837 2.837 0 002.834 2.834h17a2.837 2.837 0 002.836-2.834V15.586a2.837 2.837 0 00-2.834-2.834h-1.417V9.918a7.092 7.092 0 00-7.084-7.084zm-4.251 7.084a4.251 4.251 0 118.5 0v2.834h-8.5zm12.755 18.416h-7.087V25.11a2.834 2.834 0 10-2.834 0v3.224H8.501V15.586h17v12.752z' fill='%23626262'/%3E%3Cpath data-name='Retângulo 81' fill='rgba(0,0,0,0)' d='M0 0h34.005v34.005H0z'/%3E%3C/svg%3E");
+    background-size: 33px 33px;
+}
+
+.__modal-login-box form input::placeholder{
+    color: #000;
+    font-size: 14px;
+}
+
+.__modal-login-box .remember-password{
+    color: #F97D00;
+    font-size: 14px;
+    cursor: pointer;
+}
+.__modal-login-box .change-type-password{
+    width: 22px;
+    height: 22px;
+    display: flex;
+    background-size: 22px 22px;
+    position: absolute;
+    right: 14px;
+    top: 9px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20.976' height='20.976'%3E%3Cpath data-name='Caminho 97' d='M10.704 6.509a3.956 3.956 0 00-1.381.251l5.128 5.128a3.951 3.951 0 00.251-1.4 4 4 0 00-4-3.98z' fill='%23626262'/%3E%3Cpath data-name='Caminho 98' d='M19.979 10.215a10.53 10.53 0 00-9.217-5.827 9.8 9.8 0 00-3.053.5l.938.944a8.612 8.612 0 012.115-.274 9.3 9.3 0 018.041 4.912 10.343 10.343 0 01-2.546 2.972l.827.827a11.613 11.613 0 002.913-3.5l.151-.28z' fill='%23626262'/%3E%3Cpath data-name='Caminho 99' d='M2.838 3.368l2.6 2.6a11.374 11.374 0 00-3.9 4.242l-.151.274.151.28a10.53 10.53 0 009.218 5.827 9.863 9.863 0 004.293-.984l2.915 2.913 1.02-.874L3.834 2.5zm4.836 4.836a3.991 3.991 0 005.565 5.565l.932.932a8.688 8.688 0 01-3.414.7 9.3 9.3 0 01-8.041-4.912 10.075 10.075 0 013.565-3.671z' fill='%23626262'/%3E%3Cpath data-name='Retângulo 84' fill='rgba(0,0,0,0)' d='M0 0h20.976v20.976H0z'/%3E%3C/svg%3E");
+}
+
+.__modal-login-box form button{
+    background: #F97D00;
+    color: #fff;
+    font-size: 14px;
+    width: 100%;
+    margin: 25px 0;
+    height: 45px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.__login-integrations .title {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.__login-integrations .title span:not(.libe){
+    text-align: center;
+}   
+
+.__login-integrations .title .line{
+    width: 30%;
+    height: 1px;
+    background: #707070;
+}
+
+.__login-integrations ul {
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.__login-integrations ul li:nth-child(1) {
+    margin-right: 25px;
+}
+
+.__login-integrations ul li img {
+    width: 100px;
+    height: 35px;
+    background: #000;
+}
+
+.__modal-login-box .create-account{
+    border: 2px solid #F97D00;
+    width: 100%;
+    border-radius: 12px;
+    display: flex;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    color: #F97D00;
+    font-size: 14px;
+    font-weight: bold;
+}
+/* end login */

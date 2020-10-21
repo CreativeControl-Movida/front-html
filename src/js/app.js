@@ -125,5 +125,26 @@ function validateEmail(mail)
 }
 
 
+//popup close 
+document.querySelector('.__modal-login .__modal-login-overlay').addEventListener('click', function(){
+    document.querySelector('.__modal-login').classList.remove('active');
+})
+
+//popup open
+document.querySelector('.__header-top .login').addEventListener('click', function(e){
+    e.preventDefault();
+    document.querySelector('.__modal-login').classList.add('active');
+})
+
+// change type input
+document.querySelector('.change-type-password').addEventListener('click', function(){
+
+    if(document.querySelector('#password-login').type == "password"){
+        document.querySelector('#password-login').type = "text";
+    }else{
+        document.querySelector('#password-login').type = "password";
+    }
+})
+
 
 
